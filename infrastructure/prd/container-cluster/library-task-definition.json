@@ -1,0 +1,27 @@
+[
+  {
+    "cpu": 512,
+    "environment": [{"name":"SPRING_PROFILES_ACTIVE","value":"prod"},{"name":"AUTHORIZATION_SERVER_URI","value":"http://authorization-server.netlit.local:8080/v1/oauth/user"},{"name":"BOOK_ADDRESS","value":"http://netlit-books.s3-website.us-east-2.amazonaws.com"},{"name":"BOOK_ADDRESS_CONTENT","value":"http://cloud-reader.s3-website-us-east-1.amazonaws.com/?epub=epub_content/"},{"name":"DATABASE_ENDPOINT_NAME","value":"library-1.cluster-cglh2op0opbl.us-east-1.rds.amazonaws.com"},{"name":"DATABASE_USERNAME","value":"root"},{"name":"DATABASE_PASSWORD","value":"n371!7_1!8r4ry_d4748453"},{	"name":"AWS_BUCKET",	"value":"cloud-reader/epub_content"}],
+    "essential": true,
+    "image": "478297097809.dkr.ecr.us-east-1.amazonaws.com/library:1.0.0",
+    "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/library-app",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+    },
+    "memory": 1024,
+    "mountPoints": [],
+    "name": "library-app",
+    "portMappings": [
+      {
+        "containerPort": 8080,
+        "hostPort": 8080
+      }
+    ],
+    "networkMode": "awsvpc",
+    "volumesFrom": []
+  }
+]

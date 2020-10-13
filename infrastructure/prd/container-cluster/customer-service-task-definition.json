@@ -1,0 +1,27 @@
+[
+  {
+    "cpu": 512,
+    "environment": [{"name":"EMAIL","value":"no-reply@editoradobrasil.com.br"},{"name":"PASSWORD","value":"MkTEb$a35"},{"name":"EMAIL_TO","value":"atendimento@editoradobrasil.com.br"},{"name":"EMAIL_SALES1_TO","value":"caren.francine@editoradobrasil.com.br"},{"name":"EMAIL_SALES2_TO","value":"helena.leitao@editoradobrasil.com.br"}],
+    "essential": true,
+    "image": "478297097809.dkr.ecr.us-east-1.amazonaws.com/customer-service:1.0.1",
+    "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/customer-service-app",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+    },
+    "memory": 1024,
+    "mountPoints": [],
+    "name": "customer-service-app",
+    "portMappings": [
+      {
+        "containerPort": 8080,
+        "hostPort": 8080
+      }
+    ],
+    "networkMode": "awsvpc",
+    "volumesFrom": []
+  }
+]

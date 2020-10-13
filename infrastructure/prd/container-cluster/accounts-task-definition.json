@@ -1,0 +1,27 @@
+[
+  {
+    "cpu": 512,
+    "environment": [{"name":"SPRING_PROFILES_ACTIVE","value":"prod"},{"name":"AUTHORIZATION_SERVER_URI","value":"http://authorization-server.netlit.local:8080/v1/oauth/user"},{"name":"AWS_SNS_TOPIC","value":"arn:aws:sns:us-east-1:478297097809:credentials-created-topic"},{"name":"SNS_CREDENTIALS_UPDATED_TOPIC","value":"arn:aws:sns:us-east-1:478297097809:credentials-updated-topic"},{"name":"SPRING_MAIL_USERNAME","value":"no-reply@editoradobrasil.com.br"},{"name":"SPRING_MAIL_PASSWORD","value":"MkTEb$a35"},{"name":"SNS_CREDIT_CARD_REGISTRATION_TOPIC","value":"arn:aws:sns:us-east-1:478297097809:credit-card-registration-topic"},{"name":"SPRING_DATASOURCE_URL","value":"jdbc:mysql://library-1.cluster-cglh2op0opbl.us-east-1.rds.amazonaws.com/payments"},{"name":"SPRING_DATASOURCE_USERNAME","value":"root"},{"name":"SPRING_DATASOURCE_PASSWORD","value":"n371!7_1!8r4ry_d4748453"},{"name":"NETLIT_PROTHEUS_URL","value":"http://200.201.128.38:18238/netlit/PEDIDOSNETLIT.apw?WSDL"},{"name":"AWS_SQS_QUEUE_SENDMAIL","value":"https://sqs.us-east-1.amazonaws.com/478297097809/sendmail"},{"name":"AWS_SNS_TOPIC_SENDMAIL","value":"arn:aws:sns:us-east-1:478297097809:sendmail-sns"}],
+    "essential": true,
+    "image": "478297097809.dkr.ecr.us-east-1.amazonaws.com/accounts:1.0.3",
+    "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/accounts-app",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+    },
+    "memory": 1024,
+    "mountPoints": [],
+    "name": "accounts-app",
+    "portMappings": [
+      {
+        "containerPort": 8080,
+        "hostPort": 8080
+      }
+    ],
+    "networkMode": "awsvpc",
+    "volumesFrom": []
+  }
+]

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<additionalParameters>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="AUTHORIZATION_SERVER_URI"/>
+        <option name="value" value="http://localhost:8081/v1/oauth/user"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="AWS_ACCESS_KEY_ID"/>
+        <option name="value" value="AKIAW6XF2QZI56OHM2MH"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="AWS_REGION"/>
+        <option name="value" value="us-east-2"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="AWS_SECRET_ACCESS_KEY"/>
+        <option name="value" value="WGRTL8lciINsDVNMVqT/6lkxrMCpPydOODrw2YzS"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="AWS_SNS_TOPIC"/>
+        <option name="value" value="arn:aws:sns:us-east-2:478297097809:credentials-created-topic"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="AWS_SNS_TOPIC_SENDMAIL"/>
+        <option name="value" value="arn:aws:sqs:us-east-2:478297097809:sendmail"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="AWS_SQS_QUEUE"/>
+        <option name="value" value="authorization-server-queue"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="AWS_SQS_QUEUE_SENDMAIL"/>
+        <option name="value" value="https://sqs.us-east-2.amazonaws.com/478297097809/sendmail"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="DATABASE_USERNAME"/>
+        <option name="value" value="library"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="library.book-address"/>
+        <option name="value" value="https://du6jcb6gdkdiz.cloudfront.net"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="NETLIT_PROTHEUS_URL"/>
+        <option name="value" value="http://200.201.128.38:18238/netlit/PEDIDOSNETLIT.apw?WSDL"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="SNS_CREDENTIALS_UPDATED_TOPIC"/>
+        <option name="value" value="arn:aws:sns:us-east-2:478297097809:credentials-updated-topic"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="SNS_CREDIT_CARD_REGISTRATION_TOPIC"/>
+        <option name="value" value="arn:aws:sns:us-east-2:478297097809:credit-card-registration-topic"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="spring.profiles.active"/>
+        <option name="value" value="dev"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="SPRING_DATASOURCE_PASSWORD"/>
+        <option name="value" value="AJT8EPYcNGxMqpKm"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="SPRING_DATASOURCE_URL"/>
+        <option name="value" value="jdbc:mysql://payments.cwqhhhkhaxkf.us-east-2.rds.amazonaws.com:3306/payments"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="SPRING_DATASOURCE_USERNAME"/>
+        <option name="value" value="KqwU76juxEcXtCdf"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="SPRING_MAIL_PASSWORD"/>
+        <option name="value" value="MkTEb$a35"/>
+    </param>
+    <param>
+        <option name="enabled" value="true"/>
+        <option name="name" value="SPRING_MAIL_USERNAME"/>
+        <option name="value" value="no-reply@editoradobrasil.com.br"/>
+    </param>
+</additionalParameters>

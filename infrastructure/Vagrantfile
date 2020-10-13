@@ -1,0 +1,11 @@
+Vagrant.configure("2") do |config|
+  config.vm.define "devops-box" do |devbox|
+    devbox.vm.box = "ubuntu/bionic64"
+    devbox.vm.hostname = "devops-box"
+    devbox.vm.provision "shell", path: "bootstrap.sh"
+    devbox.vm.provider "virtualbox" do |virtualbox|
+      virtualbox.memory = 4096
+      virtualbox.cpus = 2
+    end
+  end
+end

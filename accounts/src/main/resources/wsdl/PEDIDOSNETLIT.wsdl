@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated 20190712 15:50:04 by ADVPL WSDL Server 1.110216 / Protheus 7.00.131227A-20190114 NG -->
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+xmlns:s="http://www.w3.org/2001/XMLSchema" 
+xmlns:s0="http://187.8.173.42:18238/" 
+xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" 
+xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+targetNamespace="http://187.8.173.42:18238/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://187.8.173.42:18238/">
+      <s:element name="RECEBEPV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DADOSREC" type="s0:LISTAPEDIDOS" />
+            <s:element minOccurs="1" maxOccurs="1" name="DADOSCLI" type="s0:ACLIENTES" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RECEBEPVRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RECEBEPVRESULT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ACLIENTES">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BAIRRO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CEP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CGC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODMUN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODPAIS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DDD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTNASC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EMAIL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENDERECO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ESTADO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="INSCR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MUNICIPIO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NATUREZA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NREDUZ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PESSOA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RG" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TELEFONE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TIPO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LISTAPEDIDOS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AITENS" type="s0:ARRAYOFAPEDIDOS" />
+          <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONDPAG" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LOJACLI" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LOJAENT" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NUMNLIT" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TIPO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="APEDIDOS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ITEM" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NUMNLIT" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRCVEN" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRODUTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRUNIT" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="QTDVEN" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="TES" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VALOR" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFAPEDIDOS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="APEDIDOS" type="s0:APEDIDOS" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="RECEBEPVSOAPIN">
+    <part name="parameters" element="s0:RECEBEPV" />
+  </message>
+  <message name="RECEBEPVSOAPOUT">
+    <part name="parameters" element="s0:RECEBEPVRESPONSE" />
+  </message>
+  <portType name="PEDIDOSNETLITSOAP">
+    <operation name="RECEBEPV">
+      <documentation>Metodo de Recebimento do PV</documentation> 
+      <input message="s0:RECEBEPVSOAPIN" />
+      <output message="s0:RECEBEPVSOAPOUT" />
+    </operation>
+  </portType>
+  <binding name="PEDIDOSNETLITSOAP" type="s0:PEDIDOSNETLITSOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="RECEBEPV">
+      <soap:operation soapAction="http://187.8.173.42:18238/RECEBEPV" style="document" />
+      <input><soap:body use="literal" /></input>
+      <output><soap:body use="literal" /></output>
+    </operation>
+  </binding>
+  <service name="PEDIDOSNETLIT">
+    <documentation>Web Service de consulta aos pedidos de venda da NetLit </documentation> 
+    <port name="PEDIDOSNETLITSOAP" binding="s0:PEDIDOSNETLITSOAP">
+      <soap:address location="http://187.8.173.42:18238/netlit/PEDIDOSNETLIT.apw" />
+    </port>
+  </service>
+</definitions>

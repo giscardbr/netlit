@@ -1,0 +1,74 @@
+[0m[1maws_cloudwatch_event_rule.scheduling_next_payments: Refreshing state... (ID: scheduling-next-payments)[0m
+[0m[1maws_cloudwatch_event_rule.charge_payments: Refreshing state... (ID: charge-payments)[0m
+[0m[1maws_sqs_queue.payments_queue: Refreshing state... (ID: https://sqs.us-east-2.amazonaws.com/478297097809/payments-queue)[0m
+[0m[1maws_sqs_queue.authorization_server_queue: Refreshing state... (ID: https://sqs.us-east-2.amazonaws.com/478297097809/authorization-server-queue)[0m
+[0m[1maws_sns_topic.credentials_created: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:credentials-created-topic)[0m
+[0m[1maws_sns_topic.credentials_updated: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:credentials-updated-topic)[0m
+[0m[1maws_sns_topic.charge_payments: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:charge-payments-topic)[0m
+[0m[1maws_sqs_queue.sendmail: Refreshing state... (ID: https://sqs.us-east-2.amazonaws.com/478297097809/sendmail)[0m
+[0m[1maws_sns_topic.credit_card_registration: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:credit-card-registration-topic)[0m
+[0m[1maws_sns_topic.scheduling_next_payments: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:scheduling-next-payments-topic)[0m
+[0m[1maws_sqs_queue_policy.sqs_sendmail_policy: Refreshing state... (ID: https://sqs.us-east-2.amazonaws.com/478297097809/sendmail)[0m
+[0m[1maws_cloudwatch_event_target.sns: Refreshing state... (ID: scheduling-next-payments-SendToSNS)[0m
+[0m[1mdata.aws_iam_policy_document.sns_topic_policy: Refreshing state...[0m
+[0m[1maws_cloudwatch_event_target.charge_payments_target: Refreshing state... (ID: charge-payments-SendToSNS)[0m
+[0m[1maws_sns_topic_subscription.credentials_updated_to_authorization_server_queue: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:cred...c:b633d4d1-f9f3-4497-ab74-134b29a987cb)[0m
+[0m[1maws_sns_topic_subscription.scheduling_next_payments_to_payments_queue: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:sche...c:d406ca2b-b9ec-4674-bbc5-8c04502962a9)[0m
+[0m[1maws_sns_topic_subscription.charge_payments_to_payments_queue: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:char...c:2cf2c0ba-1057-401c-8494-b715da1e1720)[0m
+[0m[1maws_sqs_queue_policy.sqs_policy: Refreshing state... (ID: https://sqs.us-east-2.amazonaws.com/478297097809/authorization-server-queue)[0m
+[0m[1mdata.aws_iam_policy_document.charge_payments_topic_policy: Refreshing state...[0m
+[0m[1maws_sns_topic_policy.default: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:scheduling-next-payments-topic)[0m
+[0m[1maws_sqs_queue_policy.payments_queue_policy: Refreshing state... (ID: https://sqs.us-east-2.amazonaws.com/478297097809/payments-queue)[0m
+[0m[1maws_sns_topic_policy.charge_payments_policy: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:charge-payments-topic)[0m
+[0m[1maws_sns_topic_subscription.credentials_created_to_authorization_server_queue: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:cred...c:47e5e0cf-b555-4055-b08c-dfc246ff9e93)[0m
+[0m[1maws_sns_topic_subscription.credit_card_registration_to_payments_queue: Refreshing state... (ID: arn:aws:sns:us-east-2:478297097809:cred...c:54f51555-5134-412a-9148-26be521ffccd)[0m
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[32m  [32m+[0m [32maws_sns_topic.sendmail_sns
+[0m      id:                              <computed>
+      arn:                             <computed>
+      name:                            "sendmail-sns"
+      policy:                          <computed>
+[0m
+[0m[32m  [32m+[0m [32maws_sns_topic_subscription.user_updates_sqs_target
+[0m      id:                              <computed>
+      arn:                             <computed>
+      confirmation_timeout_in_minutes: "1"
+      endpoint:                        "arn:aws:sqs:us-east-2:478297097809:sendmail"
+      endpoint_auto_confirms:          "false"
+      protocol:                        "sqs"
+      raw_message_delivery:            "false"
+      topic_arn:                       "${aws_sns_topic.sendmail_sns.arn}"
+[0m
+[0m
+[0m[1mPlan:[0m 2 to add, 0 to change, 0 to destroy.[0m
+
+[0m[1mDo you want to perform these actions?[0m
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  [1mEnter a value:[0m [0m
+[0m[1maws_sns_topic.sendmail_sns: Creating...[0m
+  arn:    "" => "<computed>"
+  name:   "" => "sendmail-sns"
+  policy: "" => "<computed>"[0m
+Interrupt received.
+Please wait for Terraform to exit or data loss may occur.
+Gracefully shutting down...
+stopping operation...
+[0m[1maws_sns_topic.sendmail_sns: Creation complete after 2s (ID: arn:aws:sns:us-east-2:478297097809:sendmail-sns)[0m[0m
+[0m[1m[32m
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.[0m
+[0m[1m[32m
+Outputs:
+
+authorization_server_queue_url = https://sqs.us-east-2.amazonaws.com/478297097809/authorization-server-queue
+credentials_created_sns_topic_arn = arn:aws:sns:us-east-2:478297097809:credentials-created-topic
+credentials_updated_sns_topic_arn = arn:aws:sns:us-east-2:478297097809:credentials-updated-topic
+credit_card_registration_sns_topic_arn = arn:aws:sns:us-east-2:478297097809:credit-card-registration-topic
+scheduling_next_payments_sns_topic_arn = arn:aws:sns:us-east-2:478297097809:scheduling-next-payments-topic[0m

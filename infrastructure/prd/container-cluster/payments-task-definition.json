@@ -1,0 +1,27 @@
+[
+  {
+    "cpu": 512,
+    "environment": [{"name":"SPRING_PROFILES_ACTIVE","value":"prod"},{"name":"ADYEN_API_ADDRESS","value":"https://pal-test.adyen.com/pal/servlet"},{"name":"ADYEN_CHECKOUT_API_ADDRESS","value":"https://checkout-test.adyen.com"},{"name":"ADYEN_API_KEY","value":"AQEqhmfuXNWTK0Qc+iSVlm0sqPaabIRvH5JZUWmghokj2pHQnP+ZQEXkXy7NEMFdWw2+5HzctViMSCJMYAc=-vOQXJCIdE95kITymUHHQFH3Xee1I5IfoiHHIivUQxqU=-s9uNXNh7n8MhDctB"},{"name":"ADYEN_MERCHANT_ACCOUNT","value":"EditoraDoBrasilNetLit"},{"name":"AUTHORIZATION_SERVER_URI","value":"http://authorization-server.netlit.local:8080/v1/oauth/user"},{"name":"AWS_SQS_QUEUE","value":"https://sqs.us-east-1.amazonaws.com/478297097809/payments-queue"},{"name":"DATABASE_ENDPOINT_NAME","value":"jdbc:mysql://library-1.cluster-cglh2op0opbl.us-east-1.rds.amazonaws.com/payments"},{"name":"DATABASE_USERNAME","value":"root"},{"name":"DATABASE_PASSWORD","value":"n371!7_1!8r4ry_d4748453"}],
+    "essential": true,
+    "image": "478297097809.dkr.ecr.us-east-1.amazonaws.com/payments:1.0.0",
+    "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/payments-app",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+    },
+    "memory": 1024,
+    "mountPoints": [],
+    "name": "payments-app",
+    "portMappings": [
+      {
+        "containerPort": 8080,
+        "hostPort": 8080
+      }
+    ],
+    "networkMode": "awsvpc",
+    "volumesFrom": []
+  }
+]
